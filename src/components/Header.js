@@ -1,5 +1,4 @@
 import React from 'react'
-import Logout from './Logout';
 import {useHistory} from 'react-router-dom'
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'

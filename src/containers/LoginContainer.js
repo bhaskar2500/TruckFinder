@@ -3,7 +3,6 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux'
 import Login from '../components/Login';
 import {sendLogin,isLoggedIn} from '../actions/LoginActions.js'
-import Button from '@material-ui/core/Button'
 const LoginContainer = function (props) {
         
     return (

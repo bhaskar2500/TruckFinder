@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
 import axios from 'axios';
-import {useHistory,withRouter} from 'react-router-dom';
+import {withRouter} from 'react-router-dom';
 
 function Logout(props) {
     console.log('logout entered')

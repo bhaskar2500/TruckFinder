@@ -1,7 +1,6 @@
 import './App.css';
 import Header from './components/Header'
 import Footer from './components/Footer'
-import AuthContext from './context/AuthContext'
 import Home from './components/Home';
 import {
   BrowserRouter ,
@@ -10,11 +9,11 @@ import {
 import {useMemo,useState,useEffect} from 'react'
 import LoginContainer from './containers/LoginContainer';
 import Logout from './components/Logout'
-import {ProtectedRoute} from './ProtectedRoute'
+// import {ProtectedRoute} from './ProtectedRoute'
 
 function App(props) {
   const [isAuthenticated, setAuth] = useState(false);
-  // useMemo(()=>{setAuth(isAuthenticated)},[isAuthenticated]);
+  useMemo(()=>{setAuth(isAuthenticated)},[isAuthenticated]);
   // console.log(isAuthenticated)
   useEffect(() => { }, [])
 
