@@ -5,7 +5,7 @@ import Typography from "@material-ui/core/Typography";
 
 const FooterContainer = styled.div`
   text-align: center;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100% !important;
   height: 50px !important ;
