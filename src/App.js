@@ -1,24 +1,40 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header'
+import Footer from './components/Footer'
+import AuthContext from './context/AuthContext'
+import Home from './components/Home';
+import {
+  BrowserRouter ,
+  Route,Switch
+} from "react-router-dom";
+import {useMemo,useState,useEffect} from 'react'
+import LoginContainer from './containers/LoginContainer';
+import Logout from './components/Logout'
+import {ProtectedRoute} from './ProtectedRoute'
 
-function App() {
+function App(props) {
+  const [isAuthenticated, setAuth] = useState(false);
+  // useMemo(()=>{setAuth(isAuthenticated)},[isAuthenticated]);
+  // console.log(isAuthenticated)
+  useEffect(() => { }, [])
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header></Header>
+      <BrowserRouter >
+      { isAuthenticated ? <Logout type="button"  setAuth={setAuth} > </Logout> : null}
+              <Switch>
+                <Route  path = "/"  exact > <LoginContainer setAuth={setAuth} /> </Route>
+                <Route  path = "/home"  exact > <Home /> </Route>
+                {/* <ProtectedRoute isAuthenticated={isAuthenticated} path ="/home" component={Home} > </ProtectedRoute> */}
+            </Switch>
+          </BrowserRouter>
+        <Footer></Footer>
+        
+    {/* </AuthContext.Provider> */}
+      
+</>
   );
 }
 
