@@ -10,7 +10,7 @@ export default function Header(props) {
         <div>
             <AppBar position="fixed">
                 <Toolbar style={{ backgroundColor: '#000' }}>
-                    <div style={{ cursor : 'pointer' }} onClick={()=>{history.push('/home')}}>
+                    <div style={{ cursor : 'pointer' }} >
                         Truck Service
                     </div>
                     

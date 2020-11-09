@@ -4,7 +4,7 @@ export const sendLogin = (userName,password)=> (dispatch) =>{
 
     const data = {'Authorization':'Basic '+window.btoa(userName+":"+password)};
 
-    return axios.get("http://localhost:8080/login/basic",{headers:data}).then((i)=>
+    return axios.get("https://truck-finder-backend.herokuapp.com/login/basic",{headers:data}).then((i)=>
     {
         console.log(i);
         return dispatch({

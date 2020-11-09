@@ -7,6 +7,8 @@ import Box from "@material-ui/core/Box";
 import style from './modules.css'
 import truck from './truck.svg'
 import Card from '@material-ui/core/Card'
+import Grid from '@material-ui/core/Grid'
+
 import CardContent from '@material-ui/core/CardContent'
 
 import {useHistory} from 'react-router-dom';
@@ -37,9 +39,9 @@ function Login(props) {
         <div >
             <div style={{overflow:"hidden", backgroundImage : `url(${truck})` , backgroundPositionX:-250 ,backgroundBlendMode:"luminosity",backgroundColor:'rgba(0, 0, 0, 0.7)'} }  >
                 
-                
+            <Grid   container direction="row" justify="center" alignItems="center" >
                 <Box display="flex" justifyContent="center"  alignItems="center" minHeight="100vh" minWidth="200vh" >
-                    <Card className={style.loginCard} style={{width:"400px"}} elevation={24}>
+                    <Card xs className={style.loginCard} style={{width:"400px"}} elevation={24}>
                         {/* <CardHeader disableTypography={true}  title="New User .Click on Register." > */}
                         {/* </CardHeader> */}
                             <Button style={{"margin":"10px"}} variant={register?"contained":"text"}  color="primary" onClick={(e)=>setRegister(true)} > Register </Button>   
@@ -56,6 +58,7 @@ function Login(props) {
                     </Card>
                     
                 </Box>
+            </Grid>
             </div>
         </div>
         )
