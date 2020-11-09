@@ -5,7 +5,7 @@ import Toolbar from '@material-ui/core/Toolbar'
 
 
 export default function Header(props) {
-    const history = useHistory();
+    // const history = useHistory();
     return (
         <div>
             <AppBar position="fixed">
